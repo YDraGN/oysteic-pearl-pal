@@ -13,6 +13,16 @@ import tired from "@/assets/oy2-tired.png";
 import surprised from "@/assets/oy2-surprised.png";
 import warm from "@/assets/oy2-warm.png";
 import determined from "@/assets/oy2-determined.png";
+import notFound from "@/assets/oy2-404.png";
+import sysError from "@/assets/oy2-error.png";
+import locked from "@/assets/oy2-locked.png";
+import empty from "@/assets/oy2-empty.png";
+import success from "@/assets/oy2-success.png";
+import search from "@/assets/oy2-search.png";
+import offline from "@/assets/oy2-offline.png";
+import maintenance from "@/assets/oy2-maintenance.png";
+import streak from "@/assets/oy2-streak.png";
+import denied from "@/assets/oy2-denied.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -44,10 +54,83 @@ const emotions = [
   { src: focus, name: "Tập trung", en: "Focused", note: "Mắt nheo lại, ôm cuốn sách nhỏ pastel" },
   { src: cheer, name: "Cổ vũ", en: "Cheering", note: "Miệng mở to hò reo, confetti và bong bóng" },
   { src: confused, name: "Bối rối", en: "Confused", note: "Nghiêng đầu, gãi má, bong bóng dấu “?”" },
-  { src: tired, name: "Mệt mỏi", en: "Tired", note: "Mắt lim dim, ngáp, vỏ khép lại như chăn" },
+  {
+    src: tired,
+    name: "Mệt mỏi",
+    en: "Tired",
+    note: "Vỏ khép lại như chăn, trăng khuyết navy, sao vàng và vòng loading — dùng cho màn hình chờ",
+  },
   { src: surprised, name: "Ngạc nhiên", en: "Surprised", note: "Mắt tròn xoe, miệng chữ O, bong bóng văng ra" },
   { src: warm, name: "Ấm áp", en: "Warm", note: "Tự ôm mình, má hồng, bong bóng trái tim" },
-  { src: determined, name: "Quyết tâm", en: "Determined", note: "Băng đô trắng, nắm đấm giơ lên, mắt rực lửa" },
+  {
+    src: determined,
+    name: "Quyết tâm",
+    en: "Determined",
+    note: "Băng đô trắng, cờ đỏ san hô và huy hiệu mục tiêu 990 điểm TOEIC",
+  },
+];
+
+const states = [
+  {
+    src: notFound,
+    name: "Không tìm thấy trang",
+    en: "404",
+    note: "Ngó nghiêng tìm đường, số 404 đỏ san hô, ghim bản đồ cam và đường nét đứt",
+  },
+  {
+    src: sysError,
+    name: "Lỗi hệ thống",
+    en: "System error",
+    note: "Vỏ nứt nhẹ, biển cảnh báo đỏ, bánh răng gãy — dùng cho lỗi 500 / crash",
+  },
+  {
+    src: locked,
+    name: "Tính năng đang khóa",
+    en: "Locked",
+    note: "Ôm ổ khóa vàng, chìa khóa lấp lánh — gợi mở gói nâng cấp",
+  },
+  {
+    src: denied,
+    name: "Không có quyền",
+    en: "Access denied",
+    note: "Giơ tay xin lỗi, biển cấm đỏ và khiên bảo mật — dùng cho 403",
+  },
+  {
+    src: empty,
+    name: "Chưa có dữ liệu",
+    en: "Empty state",
+    note: "Hộp rỗng, khung nét đứt và dấu cộng cam — danh sách lớp, đề thi còn trống",
+  },
+  {
+    src: search,
+    name: "Không có kết quả",
+    en: "No results",
+    note: "Kính lúp viền cyan, dấu hỏi tím — tìm kiếm từ vựng / đề thi không ra",
+  },
+  {
+    src: offline,
+    name: "Mất kết nối",
+    en: "Offline",
+    note: "Wifi gạch đỏ, dây mạng cam rớt — nhắc học viên kiểm tra mạng",
+  },
+  {
+    src: maintenance,
+    name: "Đang bảo trì",
+    en: "Maintenance",
+    note: "Mũ bảo hộ cam, cờ lê xanh, bánh răng quay — thông báo nâng cấp hệ thống",
+  },
+  {
+    src: success,
+    name: "Hoàn thành",
+    en: "Success",
+    note: "Dấu tick xanh lá, cúp vàng, confetti — nộp bài / hoàn thành khóa học",
+  },
+  {
+    src: streak,
+    name: "Nhắc học mỗi ngày",
+    en: "Streak / Reminder",
+    note: "Lịch streak lửa đỏ và chuông vàng — nhắc nhở duy trì thói quen",
+  },
 ];
 
 const palette = [
@@ -186,6 +269,37 @@ function Index() {
         </div>
       </section>
 
+      {/* System states */}
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <h2 className="text-3xl font-bold">Bộ trạng thái hệ thống</h2>
+        <p className="mt-3 max-w-2xl text-secondary-foreground">
+          Oysteic đại diện cho toàn hệ thống ToeicSpace/LMS: mỗi trạng thái đi kèm element
+          màu nổi bật để học viên nhận ra ngay chuyện gì đang xảy ra.
+        </p>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {states.map((s) => (
+            <article
+              key={s.en}
+              className="surface-card group p-6 text-center transition-transform duration-300 hover:-translate-y-1.5"
+            >
+              <div className="mx-auto flex h-40 items-center justify-center">
+                <img
+                  src={s.src}
+                  alt={`Oysteic trạng thái ${s.name}`}
+                  width={512}
+                  height={512}
+                  loading="lazy"
+                  className="max-h-40 w-auto transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <h3 className="mt-5 text-xl font-bold">{s.name}</h3>
+              <p className="text-xs uppercase tracking-[0.2em] text-primary">{s.en}</p>
+              <p className="mt-3 text-sm text-muted-foreground">{s.note}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       {/* Small-size check */}
       <section className="mx-auto max-w-6xl px-6 py-20">
         <h2 className="text-3xl font-bold">Kiểm tra ở kích thước nhỏ</h2>
@@ -196,7 +310,7 @@ function Index() {
           {[64, 40, 28].map((size) => (
             <div key={size} className="surface-card flex flex-wrap items-center gap-5 p-5">
               <span className="w-14 font-mono text-xs text-muted-foreground">{size}px</span>
-              {emotions.map((e) => (
+              {[...emotions, ...states].map((e) => (
                 <img
                   key={e.en}
                   src={e.src}
