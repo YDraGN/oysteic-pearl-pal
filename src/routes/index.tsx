@@ -1,32 +1,33 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import banner from "@/assets/sky-sea-banner.jpg";
-import base from "@/assets/oysteic-base.png";
-import joy from "@/assets/oysteic-joy.png";
-import proud from "@/assets/oysteic-proud.png";
-import playful from "@/assets/oysteic-playful.png";
-import focus from "@/assets/oysteic-focus.png";
-import cheer from "@/assets/oysteic-cheer.png";
-import curious from "@/assets/oysteic-curious.png";
-import sleepy from "@/assets/oysteic-sleepy.png";
-import surprised from "@/assets/oysteic-surprised.png";
-import warm from "@/assets/oysteic-warm.png";
-import determined from "@/assets/oysteic-determined.png";
+import base from "@/assets/oy2-base.png";
+import hello from "@/assets/oy2-hello.png";
+import joy from "@/assets/oy2-joy.png";
+import proud from "@/assets/oy2-proud.png";
+import playful from "@/assets/oy2-playful.png";
+import focus from "@/assets/oy2-focus.png";
+import cheer from "@/assets/oy2-cheer.png";
+import confused from "@/assets/oy2-confused.png";
+import tired from "@/assets/oy2-tired.png";
+import surprised from "@/assets/oy2-surprised.png";
+import warm from "@/assets/oy2-warm.png";
+import determined from "@/assets/oy2-determined.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Oysteic — Mascot cảm xúc cho ToeicSpace" },
+      { title: "Oysteic — Mascot 3D cảm xúc cho ToeicSpace" },
       {
         name: "description",
         content:
-          "Bộ mascot Oysteic: vỏ sò pastel và viên ngọc biết kể chuyện, 10 biến thể cảm xúc cùng mockup banner bầu trời và biển cả cho ToeicSpace.",
+          "Bộ mascot Oysteic phong cách 3D mềm: sinh vật ngọc trai trong vỏ sò pastel với mắt mũi miệng biểu cảm, 11 biến thể cảm xúc và mockup banner bầu trời — biển cả cho ToeicSpace.",
       },
-      { property: "og:title", content: "Oysteic — Mascot cảm xúc cho ToeicSpace" },
+      { property: "og:title", content: "Oysteic — Mascot 3D cảm xúc cho ToeicSpace" },
       {
         property: "og:description",
         content:
-          "Character sheet, 10 biến thể cảm xúc và mockup banner sky & sea của mascot Oysteic.",
+          "Character sheet, 11 biến thể cảm xúc 3D và mockup banner sky & sea của mascot Oysteic.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -36,66 +37,17 @@ export const Route = createFileRoute("/")({
 });
 
 const emotions = [
-  {
-    src: joy,
-    name: "Vui vẻ",
-    en: "Joyful",
-    note: "Vỏ mở rộng, ngọc sáng bừng, bong bóng bay lên",
-  },
-  {
-    src: proud,
-    name: "Tự hào",
-    en: "Proud",
-    note: "Vỏ ngẩng cao, tia sáng và ngôi sao nhỏ quanh ngọc",
-  },
-  {
-    src: playful,
-    name: "Tinh nghịch",
-    en: "Playful",
-    note: "Vỏ mở lệch như đang nháy mắt, ngọc ánh lên tinh quái",
-  },
-  {
-    src: focus,
-    name: "Tập trung",
-    en: "Focused",
-    note: "Vỏ gần khép, ánh sáng rọi qua khe, sóng nhiễu mờ đi",
-  },
-  {
-    src: cheer,
-    name: "Cổ vũ",
-    en: "Cheering",
-    note: "Vỏ mở hết cỡ, bong bóng thoại “!” vang khắp nơi",
-  },
-  {
-    src: curious,
-    name: "Bối rối",
-    en: "Confused",
-    note: "Vỏ nghiêng đầu, một bong bóng dấu “?” lơ lửng",
-  },
-  {
-    src: sleepy,
-    name: "Mệt mỏi",
-    en: "Tired",
-    note: "Vỏ khép hờ trĩu xuống, ngọc lim dim, bong bóng chìm",
-  },
-  {
-    src: surprised,
-    name: "Ngạc nhiên",
-    en: "Surprised",
-    note: "Vỏ bật mở đột ngột, bong bóng văng ra mọi hướng",
-  },
-  {
-    src: warm,
-    name: "Ấm áp",
-    en: "Warm",
-    note: "Ngọc ánh hồng vàng, bong bóng hình trái tim bay quanh",
-  },
-  {
-    src: determined,
-    name: "Quyết tâm",
-    en: "Determined",
-    note: "Vỏ khép chặt, ánh sáng gắt xuyên qua khe, sóng bị đẩy lùi",
-  },
+  { src: hello, name: "Chào hỏi", en: "Hello", note: "Vẫy tay, cười tươi — dùng cho onboarding" },
+  { src: joy, name: "Vui vẻ", en: "Joyful", note: "Mắt cong hình vòng cung, hai tay giơ cao" },
+  { src: proud, name: "Tự hào", en: "Proud", note: "Ưỡn ngực, cười tự mãn, lấp lánh vàng" },
+  { src: playful, name: "Tinh nghịch", en: "Playful", note: "Nháy mắt, lè lưỡi, vẫy tay trêu chọc" },
+  { src: focus, name: "Tập trung", en: "Focused", note: "Mắt nheo lại, ôm cuốn sách nhỏ pastel" },
+  { src: cheer, name: "Cổ vũ", en: "Cheering", note: "Miệng mở to hò reo, confetti và bong bóng" },
+  { src: confused, name: "Bối rối", en: "Confused", note: "Nghiêng đầu, gãi má, bong bóng dấu “?”" },
+  { src: tired, name: "Mệt mỏi", en: "Tired", note: "Mắt lim dim, ngáp, vỏ khép lại như chăn" },
+  { src: surprised, name: "Ngạc nhiên", en: "Surprised", note: "Mắt tròn xoe, miệng chữ O, bong bóng văng ra" },
+  { src: warm, name: "Ấm áp", en: "Warm", note: "Tự ôm mình, má hồng, bong bóng trái tim" },
+  { src: determined, name: "Quyết tâm", en: "Determined", note: "Băng đô trắng, nắm đấm giơ lên, mắt rực lửa" },
 ];
 
 const palette = [
@@ -120,8 +72,8 @@ function Index() {
         />
         <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 py-24 text-center md:flex-row md:gap-12 md:text-left">
           <img
-            src={base}
-            alt="Mascot Oysteic — vỏ sò pastel với viên ngọc phát sáng bên trong"
+            src={hello}
+            alt="Mascot Oysteic — sinh vật ngọc trai trong vỏ sò pastel đang vẫy tay chào"
             width={420}
             height={420}
             className="w-56 animate-bob drop-shadow-[0_20px_30px_rgba(90,130,180,0.35)] md:w-80"
@@ -134,8 +86,8 @@ function Index() {
               Chào cậu, tớ là Oysteic!
             </h1>
             <p className="mt-4 text-lg text-secondary-foreground">
-              Viên ngọc bên trong tớ chính là kiến thức. Đóng vỏ lại để thế giới ồn ào
-              nằm ngoài kia, rồi cùng nhau học thôi.
+              Tớ sống trong một chiếc vỏ sò yên tĩnh giữa biển. Đóng vỏ lại để thế giới ồn
+              ào nằm ngoài kia, rồi cùng nhau học thôi.
             </p>
             <div className="mt-7 flex flex-wrap justify-center gap-3 md:justify-start">
               <span className="surface-card px-6 py-3 font-display text-base font-semibold text-primary-foreground [background:var(--primary)]">
@@ -166,20 +118,20 @@ function Index() {
             <h2 className="text-3xl font-bold">Character sheet gốc</h2>
             <ul className="mt-5 space-y-3 text-base text-secondary-foreground">
               <li>
-                <strong className="text-foreground">Vỏ sò</strong> — độ mở/khép là ngôn
-                ngữ cơ thể duy nhất: mở là hào hứng, khép là tập trung.
+                <strong className="text-foreground">Thân ngọc trai</strong> — thân tròn xà
+                cừ óng ánh, mắt to bóng, mũi nhỏ và miệng biểu cảm rõ ràng.
               </li>
               <li>
-                <strong className="text-foreground">Viên ngọc</strong> — nguồn biểu cảm
-                chính, kể chuyện bằng độ sáng, sắc màu và hình khối, không mắt mũi miệng.
+                <strong className="text-foreground">Vỏ sò</strong> — vừa là mái nhà vừa là
+                ngôn ngữ cơ thể: mở là hào hứng, khép là tập trung, nghỉ ngơi.
               </li>
               <li>
                 <strong className="text-foreground">Bong bóng</strong> — lời nói, tiếng
                 cười và tiếng cổ vũ của Oysteic.
               </li>
               <li>
-                <strong className="text-foreground">Đường sóng</strong> — tiếng ồn và sự
-                xao nhãng bên ngoài, mờ dần khi Oysteic tập trung.
+                <strong className="text-foreground">Chất liệu</strong> — render 3D mềm,
+                bề mặt ngọc trai iridescent, ánh sáng dịu, không viền cứng.
               </li>
             </ul>
             <div className="mt-8 flex flex-wrap gap-4">
@@ -204,7 +156,7 @@ function Index() {
       {/* Emotion grid */}
       <section className="[background:var(--gradient-sky)] py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-center text-3xl font-bold">10 biến thể cảm xúc</h2>
+          <h2 className="text-center text-3xl font-bold">11 biến thể cảm xúc</h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-secondary-foreground">
             Nền trong suốt, dùng tốt ở kích thước nhỏ — từ sticker chat tới icon trạng
             thái trong bài học.
