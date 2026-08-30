@@ -54,10 +54,83 @@ const emotions = [
   { src: focus, name: "Tập trung", en: "Focused", note: "Mắt nheo lại, ôm cuốn sách nhỏ pastel" },
   { src: cheer, name: "Cổ vũ", en: "Cheering", note: "Miệng mở to hò reo, confetti và bong bóng" },
   { src: confused, name: "Bối rối", en: "Confused", note: "Nghiêng đầu, gãi má, bong bóng dấu “?”" },
-  { src: tired, name: "Mệt mỏi", en: "Tired", note: "Mắt lim dim, ngáp, vỏ khép lại như chăn" },
+  {
+    src: tired,
+    name: "Mệt mỏi",
+    en: "Tired",
+    note: "Vỏ khép lại như chăn, trăng khuyết navy, sao vàng và vòng loading — dùng cho màn hình chờ",
+  },
   { src: surprised, name: "Ngạc nhiên", en: "Surprised", note: "Mắt tròn xoe, miệng chữ O, bong bóng văng ra" },
   { src: warm, name: "Ấm áp", en: "Warm", note: "Tự ôm mình, má hồng, bong bóng trái tim" },
-  { src: determined, name: "Quyết tâm", en: "Determined", note: "Băng đô trắng, nắm đấm giơ lên, mắt rực lửa" },
+  {
+    src: determined,
+    name: "Quyết tâm",
+    en: "Determined",
+    note: "Băng đô trắng, cờ đỏ san hô và huy hiệu mục tiêu 990 điểm TOEIC",
+  },
+];
+
+const states = [
+  {
+    src: notFound,
+    name: "Không tìm thấy trang",
+    en: "404",
+    note: "Ngó nghiêng tìm đường, số 404 đỏ san hô, ghim bản đồ cam và đường nét đứt",
+  },
+  {
+    src: sysError,
+    name: "Lỗi hệ thống",
+    en: "System error",
+    note: "Vỏ nứt nhẹ, biển cảnh báo đỏ, bánh răng gãy — dùng cho lỗi 500 / crash",
+  },
+  {
+    src: locked,
+    name: "Tính năng đang khóa",
+    en: "Locked",
+    note: "Ôm ổ khóa vàng, chìa khóa lấp lánh — gợi mở gói nâng cấp",
+  },
+  {
+    src: denied,
+    name: "Không có quyền",
+    en: "Access denied",
+    note: "Giơ tay xin lỗi, biển cấm đỏ và khiên bảo mật — dùng cho 403",
+  },
+  {
+    src: empty,
+    name: "Chưa có dữ liệu",
+    en: "Empty state",
+    note: "Hộp rỗng, khung nét đứt và dấu cộng cam — danh sách lớp, đề thi còn trống",
+  },
+  {
+    src: search,
+    name: "Không có kết quả",
+    en: "No results",
+    note: "Kính lúp viền cyan, dấu hỏi tím — tìm kiếm từ vựng / đề thi không ra",
+  },
+  {
+    src: offline,
+    name: "Mất kết nối",
+    en: "Offline",
+    note: "Wifi gạch đỏ, dây mạng cam rớt — nhắc học viên kiểm tra mạng",
+  },
+  {
+    src: maintenance,
+    name: "Đang bảo trì",
+    en: "Maintenance",
+    note: "Mũ bảo hộ cam, cờ lê xanh, bánh răng quay — thông báo nâng cấp hệ thống",
+  },
+  {
+    src: success,
+    name: "Hoàn thành",
+    en: "Success",
+    note: "Dấu tick xanh lá, cúp vàng, confetti — nộp bài / hoàn thành khóa học",
+  },
+  {
+    src: streak,
+    name: "Nhắc học mỗi ngày",
+    en: "Streak / Reminder",
+    note: "Lịch streak lửa đỏ và chuông vàng — nhắc nhở duy trì thói quen",
+  },
 ];
 
 const palette = [
