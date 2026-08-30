@@ -13,6 +13,16 @@ import tired from "@/assets/oy2-tired.png";
 import surprised from "@/assets/oy2-surprised.png";
 import warm from "@/assets/oy2-warm.png";
 import determined from "@/assets/oy2-determined.png";
+import notFound from "@/assets/oy2-404.png";
+import sysError from "@/assets/oy2-error.png";
+import locked from "@/assets/oy2-locked.png";
+import empty from "@/assets/oy2-empty.png";
+import success from "@/assets/oy2-success.png";
+import search from "@/assets/oy2-search.png";
+import offline from "@/assets/oy2-offline.png";
+import maintenance from "@/assets/oy2-maintenance.png";
+import streak from "@/assets/oy2-streak.png";
+import denied from "@/assets/oy2-denied.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
