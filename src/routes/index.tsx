@@ -310,7 +310,7 @@ function Index() {
           {[64, 40, 28].map((size) => (
             <div key={size} className="surface-card flex flex-wrap items-center gap-5 p-5">
               <span className="w-14 font-mono text-xs text-muted-foreground">{size}px</span>
-              {emotions.map((e) => (
+              {[...emotions, ...states].map((e) => (
                 <img
                   key={e.en}
                   src={e.src}
