@@ -269,6 +269,37 @@ function Index() {
         </div>
       </section>
 
+      {/* System states */}
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <h2 className="text-3xl font-bold">Bộ trạng thái hệ thống</h2>
+        <p className="mt-3 max-w-2xl text-secondary-foreground">
+          Oysteic đại diện cho toàn hệ thống ToeicSpace/LMS: mỗi trạng thái đi kèm element
+          màu nổi bật để học viên nhận ra ngay chuyện gì đang xảy ra.
+        </p>
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {states.map((s) => (
+            <article
+              key={s.en}
+              className="surface-card group p-6 text-center transition-transform duration-300 hover:-translate-y-1.5"
+            >
+              <div className="mx-auto flex h-40 items-center justify-center">
+                <img
+                  src={s.src}
+                  alt={`Oysteic trạng thái ${s.name}`}
+                  width={512}
+                  height={512}
+                  loading="lazy"
+                  className="max-h-40 w-auto transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <h3 className="mt-5 text-xl font-bold">{s.name}</h3>
+              <p className="text-xs uppercase tracking-[0.2em] text-primary">{s.en}</p>
+              <p className="mt-3 text-sm text-muted-foreground">{s.note}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
       {/* Small-size check */}
       <section className="mx-auto max-w-6xl px-6 py-20">
         <h2 className="text-3xl font-bold">Kiểm tra ở kích thước nhỏ</h2>
