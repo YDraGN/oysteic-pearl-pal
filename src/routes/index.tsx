@@ -35,13 +35,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Bộ mascot Oysteic phong cách 3D mềm: sinh vật ngọc trai trong vỏ sò pastel với mắt mũi miệng biểu cảm, 11 biến thể cảm xúc và mockup banner bầu trời — biển cả cho ToeicSpace.",
+          "Bộ mascot Oysteic phong cách 3D mềm: sinh vật ngọc trai trong vỏ sò pastel với mắt mũi miệng biểu cảm, 15 biến thể cảm xúc và mockup banner bầu trời — biển cả cho ToeicSpace.",
       },
       { property: "og:title", content: "Oysteic — Mascot 3D cảm xúc cho ToeicSpace" },
       {
         property: "og:description",
         content:
-          "Character sheet, 11 biến thể cảm xúc 3D và mockup banner sky & sea của mascot Oysteic.",
+          "Character sheet, 15 biến thể cảm xúc 3D và mockup banner sky & sea của mascot Oysteic.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -267,7 +267,7 @@ function Index() {
       {/* Emotion grid */}
       <section className="[background:var(--gradient-sky)] py-20">
         <div className="mx-auto max-w-6xl px-6">
-          <h2 className="text-center text-3xl font-bold">11 biến thể cảm xúc</h2>
+          <h2 className="text-center text-3xl font-bold">15 biến thể cảm xúc</h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-secondary-foreground">
             Nền trong suốt, dùng tốt ở kích thước nhỏ — từ sticker chat tới icon trạng
             thái trong bài học.
