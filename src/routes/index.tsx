@@ -13,6 +13,10 @@ import tired from "@/assets/oy2-tired.png";
 import surprised from "@/assets/oy2-surprised.png";
 import warm from "@/assets/oy2-warm.png";
 import determined from "@/assets/oy2-determined.png";
+import waiting from "@/assets/oy2-waiting.png";
+import teamwork from "@/assets/oy2-teamwork.png";
+import listening from "@/assets/oy2-listening.png";
+import reading from "@/assets/oy2-reading.png";
 import notFound from "@/assets/oy2-404.png";
 import sysError from "@/assets/oy2-error.png";
 import locked from "@/assets/oy2-locked.png";
@@ -66,7 +70,31 @@ const emotions = [
     src: determined,
     name: "Quyết tâm",
     en: "Determined",
-    note: "Băng đô trắng, cờ đỏ san hô và huy hiệu mục tiêu 990 điểm TOEIC",
+    note: "Băng đô trắng, cờ đỏ san hô và khiên 3D “990” đỏ nổi bật — mục tiêu điểm TOEIC",
+  },
+  {
+    src: waiting,
+    name: "Chờ đợi",
+    en: "Waiting",
+    note: "Chống cằm kiên nhẫn, đồng hồ cát và đồng hồ soft 3D — đặt cạnh timer phòng thi thử",
+  },
+  {
+    src: teamwork,
+    name: "Hợp tác",
+    en: "Teamwork",
+    note: "Oysteic đập tay cùng bạn sứa tím bạc hà — nhóm học, lớp học, mời bạn bè",
+  },
+  {
+    src: listening,
+    name: "Luyện nghe",
+    en: "Listening",
+    note: "Tai nghe đỏ san hô, nốt nhạc vàng và sóng âm cyan — phần thi Listening",
+  },
+  {
+    src: reading,
+    name: "Luyện đọc",
+    en: "Reading",
+    note: "Kính tròn, sách đỏ mở rộng và chữ ABC vàng — phần thi Reading",
   },
 ];
 
